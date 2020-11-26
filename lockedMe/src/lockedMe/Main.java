@@ -1,6 +1,7 @@
 package lockedMe;
 
 import java.util.Scanner;
+import java.util.Arrays;
 import java.io.File;
 import java.io.IOException;
 
@@ -9,6 +10,7 @@ public class Main {
 	static void listFile() {
 		File dir = new File(".");
 		File[] fileList = dir.listFiles();
+		Arrays.sort(fileList);
 		for (File file : fileList) {
 			System.out.println(file);
 		}
@@ -105,7 +107,7 @@ public class Main {
 					fileName = sc.next();searchFile(fileName);
 					break;
 					
-				case 4: System.out.println("Thank you,  goodbye");
+				case 4: System.out.println("You are redirected to the main menu");
 					break;
 
 				}
@@ -131,6 +133,7 @@ public class Main {
 		 */
 		do {
 			System.out.println("Welcome to lockedme.com");
+			System.out.println("****By Siriki Fofana****");
 			System.out.println("***********************");
 			System.out.println("to view all files, select 1");
 			System.out.println("***********************");
